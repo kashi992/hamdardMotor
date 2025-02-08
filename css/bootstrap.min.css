@@ -19,13 +19,13 @@
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
     --bs-primary: #FDA12B;
-    --bs-secondary: var(--bs-secondary);
+    --bs-secondary: #091c47;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
     --bs-warning: #ffc107;
     --bs-danger: #dc3545;
     --bs-light: #F2F2F2;
-    --bs-dark: #111;
+    --bs-dark: #000;
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
@@ -237,7 +237,10 @@ a {
 }
 
 a:hover {
-    color: #ad0f1d
+    color: var(--bs-secondary)
+}
+a:hover small{
+    color: inherit !important;
 }
 
 a:not([href]):not([class]),
@@ -3088,15 +3091,15 @@ fieldset:disabled .btn {
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #b8101f;
-    border-color: #ad0f1d
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary)
 }
 
 .btn-check:focus+.btn-primary,
 .btn-primary:focus {
     color: #fff;
-    background-color: #b8101f;
-    border-color: #ad0f1d;
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
     box-shadow: 0 0 0 .25rem rgba(222, 54, 69, 0.5)
 }
 
@@ -3106,7 +3109,7 @@ fieldset:disabled .btn {
 .btn-primary.active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #ad0f1d;
+    background-color: var(--bs-secondary);
     border-color: #a20e1b
 }
 
@@ -3133,8 +3136,8 @@ fieldset:disabled .btn {
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #091c47;
-    border-color: #091a43
+    background-color: var(--bs-dark);
+    border-color: var(--bs-dark);
 }
 
 .btn-check:focus+.btn-secondary,
@@ -3767,7 +3770,7 @@ fieldset:disabled .btn {
 }
 
 .btn-link:hover {
-    color: #ad0f1d
+    color: var(--bs-secondary)
 }
 
 .btn-link:disabled,
@@ -4340,7 +4343,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #ad0f1d
+    color: var(--bs-secondary)
 }
 
 .nav-link.disabled {
@@ -5162,14 +5165,14 @@ fieldset:disabled .btn {
 
 .page-link:hover {
     z-index: 2;
-    color: #ad0f1d;
+    color: var(--bs-secondary);
     background-color: #e9ecef;
     border-color: #dee2e6
 }
 
 .page-link:focus {
     z-index: 3;
-    color: #ad0f1d;
+    color: var(--bs-secondary);
     background-color: #e9ecef;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(216, 19, 36, 0.25)
@@ -6886,7 +6889,7 @@ fieldset:disabled .btn {
 
 .link-primary:hover,
 .link-primary:focus {
-    color: #ad0f1d
+    color: var(--bs-secondary)
 }
 
 .link-secondary {
