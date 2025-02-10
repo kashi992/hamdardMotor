@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    $to = "";
+    $to = "sohaibanwar5876@gmail.com";
     $subject = "SynergyLifeCare Contact Form";
     $headers = "From: $name <$email>";
 
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Message:\n$message\n";
 
     if (mail($to, $subject, $email_content, $headers)) {
-        header('Location: /');
+        // header('Location: /');
         exit();
     } else {
         echo "Sorry, something went wrong. Please try again later.";
