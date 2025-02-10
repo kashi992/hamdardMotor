@@ -1,0 +1,25 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $to = "";
+    $subject = "SynergyLifeCare Contact Form";
+    $headers = "From: $name <$email>";
+
+    $email_content = "Name: $name\n";
+    $email_content .= "Email: $email\n\n";
+    $email_content .= "Message:\n$message\n";
+
+    if (mail($to, $subject, $email_content, $headers)) {
+        header('Location: /');
+        exit();
+    } else {
+        echo "Sorry, something went wrong. Please try again later.";
+    }
+
+} else {
+    echo "Sorry, this form cannot be submitted directly.";
+}
+?>
