@@ -527,6 +527,41 @@ height: fit-content;
     transform: rotate(45deg);
     z-index: -1;
 }
+.galleryWrap .galleryBoxes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+.galleryWrap .galleryBoxes .galleryBox{
+height: 400px;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+z-index: 1;
+cursor: pointer;
+overflow: hidden;
+border-radius: 12px;
+}
+.galleryWrap .galleryBoxes .galleryBox:hover img{
+transform: scale(1.2);
+}
+.galleryWrap .galleryBoxes .galleryBox img{
+object-fit: cover;
+border-radius: inherit;
+outline: 1px solid var(--dark);
+transition: transform 0.5s ease;
+}
+.galleryWrap .galleryBoxes .galleryBox video{
+object-fit: cover;
+border-radius: 12px;
+outline: 1px solid var(--dark);
+}
+.galleryWrap h6{
+margin-bottom: 30px;
+}
+.galleryWrap{
+padding: 60px 0;
+}
 /* responsive start  */
 @media screen and (max-width: 991px) {
     .serviceBoxes {
