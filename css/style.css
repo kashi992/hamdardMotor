@@ -213,6 +213,19 @@ transition: 0.5s;
 .service .nav .nav-link {
     background: var(--light);
     transition: .5s;
+    margin-bottom: 12px;
+    padding: 16px;
+    gap: 14px;
+}
+.service .nav .nav-link h5{
+  font-size: 18px;
+}
+.service .nav .nav-link i{
+    font-size: 26px;
+    line-height: 1;
+}
+.service .nav .nav-link:last-child {
+    margin-bottom: 0px;
 }
 
 .service .nav .nav-link.active {
@@ -330,7 +343,7 @@ transition: 0.5s;
 
 /*** Footer ***/
 .footer {
-    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/carousel-bg-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../img/heavy-vehicle.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -346,7 +359,14 @@ transition: 0.5s;
     border-radius: 35px;
     transition: .3s;
 }
-
+.footer p a {
+    display: inline-flex;
+    align-items: center;
+    transition: .3s;
+}
+.footer p a:hover {
+color: var(--primary) !important;
+}
 .footer .btn.btn-social:hover {
     color: var(--primary);
 }
@@ -372,7 +392,7 @@ transition: 0.5s;
 }
 
 .footer .btn.btn-link:hover {
-    letter-spacing: 1px;
+color: var(--primary);
     box-shadow: none;
 }
 
@@ -458,6 +478,7 @@ height: fit-content;
 }
 .serviceBoxes .serviceBox img{
     height: 300px;
+    min-height: 300px;
     width: 100%;
     object-fit: cover;
 }
@@ -485,6 +506,9 @@ height: fit-content;
 }
 .serviceBoxes .serviceBox:hover .service-text .btn{
    background: var(--dark);
+}
+.serviceBoxes .serviceBox .service-text .btn{
+ margin-top: auto;
 }
 .serviceBoxes .serviceBox:hover .service-text .small{
    color: #fff;
@@ -541,6 +565,7 @@ z-index: 1;
 cursor: pointer;
 overflow: hidden;
 border-radius: 12px;
+border: 1px solid var(--dark);
 }
 .galleryWrap .galleryBoxes .galleryBox:hover img{
 transform: scale(1.2);
@@ -548,13 +573,11 @@ transform: scale(1.2);
 .galleryWrap .galleryBoxes .galleryBox img{
 object-fit: cover;
 border-radius: inherit;
-outline: 1px solid var(--dark);
 transition: transform 0.5s ease;
 }
 .galleryWrap .galleryBoxes .galleryBox video{
 object-fit: cover;
 border-radius: 12px;
-outline: 1px solid var(--dark);
 }
 .galleryWrap h6{
 margin-bottom: 30px;
